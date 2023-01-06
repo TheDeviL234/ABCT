@@ -1,0 +1,77 @@
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+    -fx-background-color: #BCD2E8;
+}
+.selection-menu-image-view-id:hover{
+    -fx-cursor: hand;
+}
+
+.text-id{
+    -fx-text-fill: #BCD2E8; /*light blue*/
+}
+
+
+.text-field-id{
+     -fx-background-color: #2E5984;
+     -fx-font-weight: bold;
+     -fx-font-size: 14;
+     -fx-text-fill: #BCD2E8;
+     -fx-prompt-font-weight: bold;
+     -fx-prompt-font-size: 14;
+     -fx-prompt-text-fill: #BCD2E8;
+}
+.button-id {
+    -fx-background-color:radial-gradient(center 50% 50%, radius 200%, #BCD2E8, #2E5984);
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-text-fill: #1E3F66;
+}
+.button-id:hover {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #BCD2E8, #2E5984);
+}
+.button-id:pressed{
+    -fx-background-color: radial-gradient(center 50% 50%, radius 80%, #BCD2E8, #1E3F66);
+}
+
+
+.line-id{
+    -fx-stroke: #BCD2E8;
+}
+.button-row{
+    -fx-background-color: #1E3F66; /*dark blue*/
+}
+.root{
+    -fx-background-color: #BCD2E8;
+}
+.grid-id{
+    -fx-background-color: #2E5984; /*med blue*/
+}
+.selection-menu-id{
+    -fx-background-color: #1E3F66;
+}
+
+
+.scroll-pane {
+    -fx-background-color: #2E5984;
+}
+.scroll-pane > .corner {
+      -fx-background-color: #1E3F66;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #BCD2E8;
+    -fx-background-radius: 5em;
+}
