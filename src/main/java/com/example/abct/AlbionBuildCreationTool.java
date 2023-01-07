@@ -671,7 +671,7 @@ public class AlbionBuildCreationTool extends Application {
     }
 
     protected void takeScreenshot(){ //screenshots the current build and copies it to clipboard
-        WritableImage screenshot = hboxPlaceBuildsHere.snapshot(new SnapshotParameters(), null);
+        WritableImage screenshot = buildHboxArray[buildIndex].snapshot(new SnapshotParameters(), null);
         final Clipboard clipboard = Clipboard.getSystemClipboard();
         final ClipboardContent content = new ClipboardContent();
         content.putImage(screenshot);
