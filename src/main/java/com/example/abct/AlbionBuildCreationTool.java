@@ -9,12 +9,16 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -649,6 +653,7 @@ public class AlbionBuildCreationTool extends Application {
         }
         drawBuild();
         updateCssNoArgs();
+        takeScreenshot();
 
     }
 
@@ -663,6 +668,14 @@ public class AlbionBuildCreationTool extends Application {
         hboxPlaceBuildsHere.setBackground(new Background(new BackgroundFill(medBlue,null,null)));
         hboxPlaceBuildsHere.setAlignment(Pos.CENTER);
         HBox.setHgrow(buildHboxArray[buildIndex],Priority.NEVER);
+    }
+
+    protected void takeScreenshot(){ //screenshots the current build and copies it to clipboard
+        WritableImage screenshot = hboxPlaceBuildsHere.snapshot(new SnapshotParameters(), null);
+        final Clipboard clipboard = Clipboard.getSystemClipboard();
+        final ClipboardContent content = new ClipboardContent();
+        content.putImage(screenshot);
+        clipboard.setContent(content);
     }
 
 
