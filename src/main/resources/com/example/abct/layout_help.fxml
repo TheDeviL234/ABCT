@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox prefHeight="700.0" prefWidth="700.0" spacing="20.0" styleClass="help-menu-bg-id">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="help-menu-bg-id">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" styleClass="help-menu-fg-id">
+                     <children>
+                        <Label alignment="TOP_LEFT" styleClass="text-big-id" text="Albion Build Creation Tool" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="Version: 1.3.2" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="700.0" prefWidth="700.0" styleClass="help-menu-hbox-id">
+               <children>
+                  <VBox prefHeight="700.0" prefWidth="700.0" styleClass="help-menu-fg-id">
+                     <children>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="How to use the tool:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-The purpose of this tool is to streamline build sheet creation for guilds" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-The current build (in the middle of the screen) is automatically copied to clipboard" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-Use check boxes in the top left to filter equipment displayed at the bottom of the screen" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-Click on equipment icons at the bottom of the screen to add them to the current build" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-&quot;Swap&quot; check boxes enable and disable swaps in the current build" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-While a swap for a certain slot is enabled, the gear underneath cannot be changed" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-Use the styles controls to color the build as you like (color fields take HEX codes)" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-The current build is automatically copied to system clipboard" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="-When done with a build, just paste it into Photoshop / Power Point / Paint" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="help-menu-bg-id">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" styleClass="help-menu-fg-id">
+                     <children>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="Made by: TheDeviL234" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" styleClass="text-id" text="rats not food" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

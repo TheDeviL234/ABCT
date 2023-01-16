@@ -23,6 +23,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.*;
 import java.net.URL;
 import java.security.CodeSource;
@@ -33,6 +35,7 @@ public class AlbionBuildCreationTool extends Application {
 
     String css = this.getClass().getResource("layout.css").toExternalForm();
     Stage mainStage = new Stage();
+    private Stage helpWindowStage;
     @FXML
     FlowPane selectionMenu;
     @FXML
@@ -42,7 +45,7 @@ public class AlbionBuildCreationTool extends Application {
     @FXML
     VBox vboxBuildsBuilds;
     @FXML
-    Button btnSetStyles,btnResetStyles;
+    Button btnSetStyles,btnResetStyles,btnHelp;
     @FXML
     TextField tfBackgroundColor,tfBuildBoxColor,tfBorderColor,tfBorderWidth;
     static File[] filenames; //t8 files are the first 195, t7 files are t8.index +195
@@ -1049,6 +1052,30 @@ public class AlbionBuildCreationTool extends Application {
         }
         updateCss(backgroundColor,buildBoxColor,borderColor,borderWidth);
     }
+    @FXML
+    protected void btnHelpOnClick(ActionEvent event){
+        if (helpWindowStage == null || !helpWindowStage.isShowing()) {
+            try {
+                FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("layout_help.fxml"));
+                Parent root2 = (Parent) fxmlLoader2.load();
+                helpWindowStage = new Stage();
+                helpWindowStage.setTitle("Help");
+                root2.getStylesheets().add(css);
+                helpWindowStage.setScene(new Scene(root2));
+                helpWindowStage.show();
+                helpWindowStage.setResizable(true);
+            } catch (IOException e) {
+                System.out.println("Failed to load help window");
+            }
+        }else{
+            helpWindowStage.toFront();
+        }
+        if(helpWindowStage.isIconified()){
+            helpWindowStage.setIconified(false);
+        }
+
+    }
+
     @FXML
     protected void btnSetStylesOnClick(ActionEvent event){ //sets styles to text field values
         Color backgroundColor, buildBoxColor, borderColor;

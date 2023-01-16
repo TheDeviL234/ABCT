@@ -8,6 +8,15 @@
 
 .text-id{
     -fx-text-fill: #BCD2E8; /*light blue*/
+    -fx-font-weight: bold;
+    -fx-word-wrap: break-word;
+    -fx-font-size: 14;
+}
+.text-big-id{
+    -fx-text-fill: #BCD2E8; /*light blue*/
+    -fx-font-weight: bold;
+    -fx-word-wrap: break-word;
+    -fx-font-size: 20;
 }
 
 
@@ -48,6 +57,15 @@
 }
 .selection-menu-id{
     -fx-background-color: #1E3F66;
+}
+.help-menu-bg-id{
+    -fx-background-color: #2E5984;
+}
+.help-menu-fg-id{
+    -fx-background-color: #1E3F66;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-color: #BCD2E8;
 }
 
 

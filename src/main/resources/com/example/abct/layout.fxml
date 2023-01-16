@@ -214,6 +214,26 @@
                         </Button>
                      </children>
                   </VBox>
+                  <Line endX="-100.0" endY="100.0" startX="-100.0" strokeWidth="2.0" styleClass="line-id">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Line>
+                  <VBox>
+                     <padding>
+                        <Insets right="20.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="btnHelp" mnemonicParsing="false" onAction="#btnHelpOnClick" styleClass="button-id" text="Help">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
                </children>
                <padding>
                   <Insets left="20.0" />
