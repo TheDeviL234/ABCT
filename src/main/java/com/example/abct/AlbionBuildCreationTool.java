@@ -1,6 +1,7 @@
 package com.example.abct;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -91,6 +92,7 @@ public class AlbionBuildCreationTool extends Application {
         scene.getStylesheets().add(css);
         mainStage.setScene(scene);
         mainStage.show();
+        mainStage.setOnCloseRequest(e -> Platform.exit());
 
     }
 
@@ -827,7 +829,7 @@ public class AlbionBuildCreationTool extends Application {
             Image chestpieceImage = new Image(url.openStream());
             url = AlbionBuildCreationTool.class.getResource("images/Elder's Mercenary Shoes.png");
             Image bootsImage = new Image(url.openStream());
-            url = AlbionBuildCreationTool.class.getResource("images/Elder's Lymhurst Cape.png");
+            url = AlbionBuildCreationTool.class.getResource("images/Grandmaster's Lymhurst Cape.png");
             Image capeImage = new Image(url.openStream());
             url = AlbionBuildCreationTool.class.getResource("images/Deadwater Eel Stew.png");
             Image foodImage = new Image(url.openStream());
@@ -1060,12 +1062,14 @@ public class AlbionBuildCreationTool extends Application {
                 Parent root2 = (Parent) fxmlLoader2.load();
                 helpWindowStage = new Stage();
                 helpWindowStage.setTitle("Help");
+                URL url2 = AlbionBuildCreationTool.class.getResource("misc/Golden Sextant.png");
+                Image iconImage2 = new Image(url2.openStream());
+                helpWindowStage.getIcons().add(iconImage2);
                 root2.getStylesheets().add(css);
                 helpWindowStage.setScene(new Scene(root2));
                 helpWindowStage.show();
                 helpWindowStage.setResizable(true);
             } catch (IOException e) {
-                System.out.println("Failed to load help window");
             }
         }else{
             helpWindowStage.toFront();
