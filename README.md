@@ -1,8 +1,8 @@
 # ABCT
-Albion Online Build Creation Tool - Version 1.3.2
+Albion Online Build Creation Tool - Version 1.3.3
 
 JavaFX program for making builds for Albion Online.
 
 Requires Java 19 to run.
 
-Download Link: https://drive.google.com/file/d/1VGvQICx6O5cs5qW7qF5gT8DA1Ptwx28N/view?usp=sharing
+Download Link: https://drive.google.com/file/d/15Y7Rn0A1GT93S5w_BvQYHD6mk_qmvuG2/view?usp=sharing
