@@ -24,7 +24,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.*;
 import java.net.URL;
@@ -111,14 +110,14 @@ public class AlbionBuildCreationTool extends Application {
                 String name = e.getName();
                 if ((name.startsWith("com/example/abct/images")) && (name.endsWith(".png")))
                 {
-                    System.out.println("current entry: " + numFiles + "  name: " + name);
+                    System.out.println("File Index " + numFiles + " - Filename: " + name);
                     numFiles++;
 
                 }
             }
         }
         else {
-            System.out.println("LOAD FAILED");
+            System.out.println("Load Failed - File not found");
         }
         filenames = new File[numFiles];
         entryArray = new ZipEntry[numFiles];
@@ -133,39 +132,21 @@ public class AlbionBuildCreationTool extends Application {
                 String name = e.getName();
                 if ((name.startsWith("com/example/abct/images")) && (name.endsWith(".png"))) {
 
-                    System.out.println("22222 current entry: "+numFiles+"  name: "+name);
+                    //System.out.println("current entry: "+numFiles+"  name: "+name);
                     filenames[counter] = new File(name);
                     entryArray[counter] = new ZipEntry(e);
-                    System.out.println("entry array: "+entryArray[counter].getName());
-                    System.out.println("filenames path: "+filenames[counter].getPath());
+                    //System.out.println("entry array: "+entryArray[counter].getName());
+                    //System.out.println("filenames path: "+filenames[counter].getPath());
                     counter++;
                 }
             }
         }
         else {
-            System.out.println("22222 LOAD FAILED");
+            System.out.println("Load Failed - File not found 2");
         }
-        System.out.println("numFiles == "+numFiles);
+        System.out.println("Files Found = "+numFiles);
 
 
-
-
-/*
-        File folder = new File("src/main/resources/images/");
-        File[] listOfFiles = folder.listFiles();
-        numFiles = 0;
-        for(int tempNumFiles = 0; tempNumFiles < listOfFiles.length; tempNumFiles++){
-            if(listOfFiles[tempNumFiles].getName().endsWith(".png")){
-                numFiles++;
-            }
-        }
-        filenames = new File[numFiles];
-        for (File file : listOfFiles) {
-            if (file.isFile() && file.getName().endsWith(".png")) {
-                filenames[i] = file; //populates array
-                i++;
-            }
-        }*/
         imageArray = new Image[numFiles];
         imageViewArray = new ImageView[numFiles];
         itemArray = new Items[numFiles];
@@ -191,7 +172,7 @@ public class AlbionBuildCreationTool extends Application {
 
 
                     URL url = AlbionBuildCreationTool.class.getResource("images/"+filenames[i].getName());
-                    System.out.println(url.toString());
+                    System.out.println("Memory Index "+i+" - "+url.toString());
                     Image currentImage = new Image(url.openStream());
                     imageArray[i] = currentImage;
                     imageViewArray[i] = new ImageView(imageArray[i]);
@@ -200,13 +181,12 @@ public class AlbionBuildCreationTool extends Application {
 
                     itemArray[i] = new Items();
                     itemArray[i].itemId = i;
-                    System.out.println("LOAD COMPLETE "+i);
                     i++;
                 }
             }
         }
         else {
-            System.out.println("22222 LOAD FAILED");
+            System.out.println("Load Failed - File not found 3");
         }
 
 
@@ -215,17 +195,7 @@ public class AlbionBuildCreationTool extends Application {
 
 
         for (i = 0; i < numFiles; i++){
-            /*
-            Image currentImage = new Image(AlbionBuildCreationTool.class.getResource("images/"+filenames[i].getName()).openStream());
-            imageArray[i] = currentImage;
-            imageViewArray[i] = new ImageView(entryArray[i].getName());
-            imageViewArray[i].setFitHeight(80);
-            imageViewArray[i].setFitWidth(80);
 
-            itemArray[i] = new Items();
-            itemArray[i].itemId = i;
-
-         */
 
             //-----------------------BASIC TIERS------------------------//
             if(filenames[i].getName().toString().startsWith("Elder")){ //item tiers
@@ -634,7 +604,7 @@ public class AlbionBuildCreationTool extends Application {
             }
             //can add debug check here to troubleshoot files
         }
-        System.out.println("Num Files: "+numFiles);
+        System.out.println("Files Loaded: "+numFiles);
         populateBuildsWithDefaults();
 
 
