@@ -2,9 +2,6 @@
     -fx-padding: 0 1 0 1;
     -fx-background-color: #BCD2E8;
 }
-.selection-menu-image-view-id:hover{
-    -fx-cursor: hand;
-}
 
 .text-id{
     -fx-text-fill: #BCD2E8; /*light blue*/

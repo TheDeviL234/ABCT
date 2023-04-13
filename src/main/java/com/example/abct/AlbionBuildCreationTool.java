@@ -92,7 +92,6 @@ public class AlbionBuildCreationTool extends Application {
         mainStage.setScene(scene);
         mainStage.show();
         mainStage.setOnCloseRequest(e -> Platform.exit());
-
     }
 
     public static void main(String[] args) throws IOException {
@@ -416,8 +415,7 @@ public class AlbionBuildCreationTool extends Application {
             }
             //-----------------------ONE HANDED WEAPONS------------------------//
             if(filenames[i].getName().toString().endsWith("Bloodletter.png")
-                    || (filenames[i].getName().toString().endsWith("Arcane Staff.png")
-                    && !filenames[i].getName().toString().endsWith("Great Arcane Staff.png"))
+                    || filenames[i].getName().toString().endsWith("'s Arcane Staff.png")
                     || filenames[i].getName().toString().endsWith("Demonfang.png")
                     || filenames[i].getName().toString().endsWith("Battleaxe.png")
                     || filenames[i].getName().toString().endsWith("Bedrock Mace.png")
@@ -719,17 +717,91 @@ public class AlbionBuildCreationTool extends Application {
 
     @FXML
     protected void addToSelectionMenu(){ //draws components
-        for(int i=0; i<numFiles; i++) {
+        /*for(int i=0; i<numFiles; i++) {
             if (drawEnable[i] == 1 && drawDisable[i] != 1) {
                 imageViewArray[i].setFitHeight(80);
                 imageViewArray[i].setFitWidth(80);
                 selectionMenu.getChildren().add(imageViewArray[i]);
                 addMouseListenersToSelectionMenu(i);
-
+                //backup
+            }
+        }*/
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                imageViewArray[i].setFitHeight(80);
+                imageViewArray[i].setFitWidth(80);
+                addMouseListenersToSelectionMenu(i);
             }
         }
-
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isWeapon && !itemArray[i].isOneHanded){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isWeapon && itemArray[i].isOneHanded){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+                }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isOffhand){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isHelmet){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isChestpiece){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isBoots){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isCape){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isPotion){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isFood){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                if (itemArray[i].isOther){
+                    selectionMenu.getChildren().add(imageViewArray[i]);
+                    drawDisable[i] = 1;
+        }}}
+        for(int i=0; i<numFiles; i++) {
+            if (drawEnable[i] == 1 && drawDisable[i] != 1) {
+                selectionMenu.getChildren().add(imageViewArray[i]);
+            }
+        }
     }
+
+
+
     public static void populateBuildsWithDefaults() throws IOException {
         for(int i = 0; i < buildArray.length; i++) {
             makeBuild(i,true);
@@ -993,7 +1065,20 @@ public class AlbionBuildCreationTool extends Application {
                 }
                 mouseEvent.consume();
             }});
-        imageViewArray[i].getStyleClass().add("selection-menu-image-view-id"); //adds css id for hover cursor
+        imageViewArray[i].setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                imageViewArray[i].setScaleY(1.2);
+                imageViewArray[i].setScaleX(1.2);
+            }
+        });
+        imageViewArray[i].setOnMouseExited(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                imageViewArray[i].setScaleY(1);
+                imageViewArray[i].setScaleX(1);
+            }
+        });
     }
 
 
@@ -1098,7 +1183,6 @@ public class AlbionBuildCreationTool extends Application {
                 (int)( color.getGreen() * 255 ),
                 (int)( color.getBlue() * 255 ) );
     }
-
 
     @FXML
     public void checkBoxWeaponsClicked(ActionEvent event) {
