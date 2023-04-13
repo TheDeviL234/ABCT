@@ -416,7 +416,8 @@ public class AlbionBuildCreationTool extends Application {
             }
             //-----------------------ONE HANDED WEAPONS------------------------//
             if(filenames[i].getName().toString().endsWith("Bloodletter.png")
-                    || filenames[i].getName().toString().endsWith("Arcane Staff.png")
+                    || (filenames[i].getName().toString().endsWith("Arcane Staff.png")
+                    && !filenames[i].getName().toString().endsWith("Great Arcane Staff.png"))
                     || filenames[i].getName().toString().endsWith("Demonfang.png")
                     || filenames[i].getName().toString().endsWith("Battleaxe.png")
                     || filenames[i].getName().toString().endsWith("Bedrock Mace.png")
