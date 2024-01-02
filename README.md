@@ -5,4 +5,4 @@ JavaFX program for making builds for Albion Online.
 
 Requires Java 21 to run.
 
-Download Link: https://drive.google.com/file/d/1XPsyKKkmx1QZdx2C8_3fEAT2_VH5aghh/view?usp=sharing
+Google Drive download link: https://drive.google.com/file/d/1XPsyKKkmx1QZdx2C8_3fEAT2_VH5aghh/view?usp=sharing
