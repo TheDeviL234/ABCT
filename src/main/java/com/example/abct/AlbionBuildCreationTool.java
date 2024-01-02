@@ -267,11 +267,19 @@ public class AlbionBuildCreationTool extends Application {
                     || filenames[i].getName().toString().startsWith("Major Resistance")
                     || filenames[i].getName().toString().startsWith("Major Gigantify")
                     || filenames[i].getName().toString().startsWith("Major Sticky")
+                    || filenames[i].getName().toString().startsWith("Major Acid")
+                    || filenames[i].getName().toString().startsWith("Major Calming")
+                    || filenames[i].getName().toString().startsWith("Major Cleansing")
                     || filenames[i].getName().toString().endsWith("Omelette.png")
                     || filenames[i].getName().toString().endsWith("Catfish.png")) {
                 itemArray[i].tier = 7;
                 itemArray[i].isOther = true;
             } else if (filenames[i].getName().toString().startsWith("Major Poison")
+                    || filenames[i].getName().toString().startsWith("Focus Restoration")
+                    || filenames[i].getName().toString().startsWith("Major Berserk")
+                    || filenames[i].getName().toString().startsWith("Major Gathering")
+                    || filenames[i].getName().toString().startsWith("Major Hellfire")
+                    || filenames[i].getName().toString().startsWith("Major Tornado")
                     || filenames[i].getName().toString().endsWith("Stew.png")
                     || filenames[i].getName().toString().endsWith("Sturgeon.png")){
                 itemArray[i].tier = 8;
@@ -347,7 +355,8 @@ public class AlbionBuildCreationTool extends Application {
                     || filenames[i].getName().toString().endsWith("'s Spear.png")
                     || filenames[i].getName().toString().endsWith("Whispering Bow.png")
                     || filenames[i].getName().toString().endsWith("Tombhammer.png")
-                    || filenames[i].getName().toString().endsWith("Warbow.png")){
+                    || filenames[i].getName().toString().endsWith("Warbow.png")
+                    || filenames[i].getName().toString().endsWith("Prowling Staff.png")){
                 itemArray[i].isGanking = true; //ganking
             }
             //-----------------------ZvZ------------------------//
@@ -391,7 +400,10 @@ public class AlbionBuildCreationTool extends Application {
                     || filenames[i].getName().toString().endsWith("Wailing Bow.png")
                     || filenames[i].getName().toString().endsWith("Repeater.png")
                     || filenames[i].getName().toString().endsWith("Wildfire Staff.png")
-                    || filenames[i].getName().toString().endsWith("Witchwork Staff.png")){
+                    || filenames[i].getName().toString().endsWith("Witchwork Staff.png")
+                    || filenames[i].getName().toString().endsWith("Earthrune Staff.png")
+                    || filenames[i].getName().toString().endsWith("Lightcaller.png")
+                    || filenames[i].getName().toString().endsWith("Rootbound Staff.png")){
                 itemArray[i].isZvz = true; //zvz
             }
             //-----------------------small-scale------------------------//
@@ -410,7 +422,10 @@ public class AlbionBuildCreationTool extends Application {
                     || filenames[i].getName().toString().endsWith("Realmbreaker.png")
                     || filenames[i].getName().toString().endsWith("Spirithunter.png")
                     || filenames[i].getName().toString().endsWith("Paws.png")
-                    || filenames[i].getName().toString().endsWith("Wildfire Staff.png")){
+                    || filenames[i].getName().toString().endsWith("Wildfire Staff.png")
+                    || filenames[i].getName().toString().endsWith("Bloodmoon Staff.png")
+                    || filenames[i].getName().toString().endsWith("Hellspawn Staff.png")
+                    || filenames[i].getName().toString().endsWith("Primal Staff.png")){
                 itemArray[i].isSs = true; //small-scale
             }
             //-----------------------ONE HANDED WEAPONS------------------------//

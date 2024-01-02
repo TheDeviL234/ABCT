@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="abct:jar">
+  <artifact type="jar" build-on-make="true" name="abct:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/abct_jar</output-path>
     <root id="archive" name="abct.jar">
       <element id="directory" name="META-INF">
