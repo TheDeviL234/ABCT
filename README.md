@@ -9,6 +9,9 @@ Google Drive download link: https://drive.google.com/file/d/1XPsyKKkmx1QZdx2C8_3
 
 
 
+
+
+
 Java 21 installation tutorial:
 
 -Download JDK 21 (or higher) (e.g. https://www.oracle.com/java/technologies/downloads/#jdk21-windows )
