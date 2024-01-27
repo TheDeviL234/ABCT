@@ -7,11 +7,7 @@ Requires Java 21 to run.\
 \
 Google Drive download link: https://drive.google.com/file/d/1XPsyKKkmx1QZdx2C8_3fEAT2_VH5aghh/view?usp=sharing\
 \
-\
-\
 ---------------------------------------------------------------------------------------------------------------------------\
-\
-\
 \
 Java 21 installation tutorial:\
 \
